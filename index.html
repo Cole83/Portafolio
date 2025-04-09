@@ -11,42 +11,54 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f0f8ff;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             font-family: 'Arial', sans-serif;
         }
         
         .palabra {
             display: flex;
-            gap: 10px;
+            gap: 15px;
         }
         
         .letra {
-            font-size: 5rem;
+            font-size: 6rem;
             font-weight: bold;
-            color: #ff6b6b;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             position: relative;
-            animation: saltar 1.5s ease infinite;
+            animation: saltar 1.8s ease infinite;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
         }
         
-        /* Diferentes retrasos para cada letra */
-        .letra:nth-child(1) { animation-delay: 0.1s; }
-        .letra:nth-child(2) { animation-delay: 0.2s; }
-        .letra:nth-child(3) { animation-delay: 0.3s; }
-        .letra:nth-child(4) { animation-delay: 0.4s; }
+        /* Colores y retrasos individuales para cada letra */
+        .letra:nth-child(1) { 
+            color: #ff6b6b; 
+            animation-delay: 0.1s; 
+        }
+        .letra:nth-child(2) { 
+            color: #48dbfb; 
+            animation-delay: 0.2s; 
+        }
+        .letra:nth-child(3) { 
+            color: #1dd1a1; 
+            animation-delay: 0.3s; 
+        }
+        .letra:nth-child(4) { 
+            color: #feca57; 
+            animation-delay: 0.4s; 
+        }
         
         @keyframes saltar {
             0%, 100% {
-                transform: translateY(0) scale(1);
+                transform: translateY(0) rotate(0deg) scale(1);
             }
             30% {
-                transform: translateY(-50px) scale(1.1, 0.9);
+                transform: translateY(-80px) rotate(10deg) scale(1.2, 0.8);
+                text-shadow: 5px 15px 8px rgba(0, 0, 0, 0.3);
             }
             50% {
-                transform: translateY(0) scale(1);
+                transform: translateY(0) rotate(0deg) scale(1);
             }
             65% {
-                transform: translateY(-20px) scale(1.05, 0.95);
+                transform: translateY(-30px) rotate(-5deg) scale(1.1, 0.9);
             }
         }
     </style>
